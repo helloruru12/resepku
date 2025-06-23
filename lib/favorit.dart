@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resepku/home.dart';
+import 'package:resepku/tambah.dart';
 
 class HalamanFavorit extends StatelessWidget {
   const HalamanFavorit({super.key});
@@ -24,7 +26,7 @@ class HalamanFavorit extends StatelessWidget {
                     ),
                   ),
                   CircleAvatar(
-                    backgroundImage: AssetImage('assets/chef_icon.png'), // Gambar chef
+                    backgroundImage: AssetImage('assets/images/logo1.png'), // Gambar chef
                     radius: 20,
                   ),
                 ],
@@ -37,9 +39,9 @@ class HalamanFavorit extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  _resepCard('Nasi Goreng', 'assets/nasi_goreng.jpg'),
+                  _resepCard('Nasi Goreng', 'assets/images/logo1.png'),
                   const SizedBox(width: 12),
-                  _resepCard('Donat Kentang', 'assets/donat_kentang.jpg'),
+                  _resepCard('Donat Kentang', 'assets/images/logo1.png'),
                 ],
               ),
             ),
@@ -55,10 +57,22 @@ class HalamanFavorit extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 32),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Icon(Icons.home, size: 28),
-                  Icon(Icons.add, size: 28),
-                  Icon(Icons.favorite, size: 28),
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (_) => const HomePage()));
+                    },
+                    child: const Icon(Icons.home, size: 28),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (_) => const TambahPage()));
+                    },
+                    child: const Icon(Icons.add, size: 28),
+                  ),
+                  const Icon(Icons.favorite, size: 28, color: Colors.orange),
                 ],
               ),
             ),

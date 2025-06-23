@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resepku/splashscreen.dart';
+import 'package:resepku/favorit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen(),
+      home: HalamanFavorit(),
     );
   }
 }
