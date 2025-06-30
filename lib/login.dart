@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resepku/regis.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -8,7 +9,8 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF7F5EE), // Warna latar belakang krem
       body: Center(
-        child: SingleChildScrollView( // Menggunakan SingleChildScrollView agar keyboard tidak menutupi input
+        child: SingleChildScrollView(
+          // Menggunakan SingleChildScrollView agar keyboard tidak menutupi input
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +34,10 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide.none, // Menghilangkan border
                   ),
-                  contentPadding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
+                  contentPadding: const EdgeInsets.symmetric(
+                    vertical: 16.0,
+                    horizontal: 20.0,
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -46,7 +51,10 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide.none, // Menghilangkan border
                   ),
-                  contentPadding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
+                  contentPadding: const EdgeInsets.symmetric(
+                    vertical: 16.0,
+                    horizontal: 20.0,
+                  ),
                 ),
               ),
               const SizedBox(height: 30),
@@ -59,7 +67,9 @@ class LoginScreen extends StatelessWidget {
                     print('Tombol Login ditekan!');
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFE4A700), // Warna tombol kuning
+                    backgroundColor: const Color(
+                      0xFFE4A700,
+                    ), // Warna tombol kuning
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -81,14 +91,17 @@ class LoginScreen extends StatelessWidget {
                 children: <Widget>[
                   const Text(
                     'Belum punya akun?',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                   TextButton(
                     onPressed: () {
-                      // Aksi saat tombol Register ditekan (saat ini kosong)
+                      // Navigate to the RegisterScreen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Regis(),
+                        ),
+                      );
                       print('Tombol Register ditekan!');
                     },
                     child: const Text(
@@ -96,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue, // Warna biru untuk "Register"
+                        color: Colors.blue,
                       ),
                     ),
                   ),
