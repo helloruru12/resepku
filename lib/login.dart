@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resepku/regis.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -94,6 +95,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
+                      // Ini adalah bagian yang penting: Navigasi ke halaman Regis
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Regis()),
+                      );
                       print('Tombol Register ditekan!');
                     },
                     child: const Text(
