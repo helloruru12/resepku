@@ -10,11 +10,15 @@ class Regis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F5EE), // Warna latar belakang krem, sama dengan Login
+      backgroundColor: const Color(
+        0xFFF7F5EE,
+      ), // Warna latar belakang krem, sama dengan Login
       body: Center(
         child: SingleChildScrollView(
           // Menggunakan SingleChildScrollView agar keyboard tidak menutupi input
-          padding: const EdgeInsets.symmetric(horizontal: 24.0), // Padding yang sama dengan Login
+          padding: const EdgeInsets.symmetric(
+            horizontal: 24.0,
+          ), // Padding yang sama dengan Login
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -28,7 +32,9 @@ class Regis extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 50), // Spasi yang sama
-              _buildTextField('Nama Lengkap'), // Menggunakan helper untuk TextField
+              _buildTextField(
+                'Nama Lengkap',
+              ), // Menggunakan helper untuk TextField
               const SizedBox(height: 20),
               _buildTextField('Username'),
               const SizedBox(height: 20),
@@ -43,9 +49,13 @@ class Regis extends StatelessWidget {
                     print('Tombol Register ditekan!');
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFE4A700), // Warna tombol kuning, sama dengan Login
+                    backgroundColor: const Color(
+                      0xFFE4A700,
+                    ), // Warna tombol kuning, sama dengan Login
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0), // Radius border sama dengan Login
+                      borderRadius: BorderRadius.circular(
+                        10.0,
+                      ), // Radius border sama dengan Login
                     ),
                     elevation: 0, // Tanpa elevasi, sama dengan Login
                   ),
@@ -54,18 +64,20 @@ class Regis extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18, // Ukuran font sama dengan Login
                       fontWeight: FontWeight.bold,
-                      color: Colors.white, // Warna teks putih, sama dengan Login
+                      color:
+                          Colors.white, // Warna teks putih, sama dengan Login
                     ),
                   ),
                 ),
               ),
               const SizedBox(height: 20),
-              Row( // Menggunakan Row untuk teks "Sudah punya akun? Login"
+              Row(
+                // Menggunakan Row untuk teks "Sudah punya akun? Login"
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const Text(
                     'Sudah punya akun?',
-                    style: TextStyle(fontSize: 16, color: Colors.black), // Gaya teks sama dengan Login
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                   TextButton(
                     onPressed: () {
