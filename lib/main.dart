@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resepku/splashscreen.dart';
+import 'package:resepku/home.dart';
 
 void main() {
   runApp(const MyApp());
