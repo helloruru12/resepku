@@ -62,7 +62,7 @@ class _TambahPageState extends State<TambahPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Tambah Resep',
+                'Tambah Resep Baru',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
