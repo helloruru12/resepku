@@ -62,7 +62,7 @@ class Regis extends StatelessWidget {
                   child: const Text(
                     'Register',
                     style: TextStyle(
-                      fontSize: 18, // Ukuran font sama dengan Login
+                      fontSize: 18, // Ukuran font sama dengan Loginn
                       fontWeight: FontWeight.bold,
                       color:
                           Colors.white, // Warna teks putih, sama dengan Login
