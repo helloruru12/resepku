@@ -9,12 +9,7 @@ class HalamanFavorit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, String>> resepFavorit = [
-      {
-        'title': 'Nasi Goreng',
-        'image': 'assets/images/logo1.png',
-        'bahan': 'Nasi, Bawang Merah, Bawang Putih, Telur, Kecap, Garam',
-        'langkah': '1. Tumis bumbu\n2. Masukkan telur\n3. Tambahkan nasi\n4. Tambah kecap & garam\n5. Aduk rata'
-      },
+  
       {
         'title': 'Mie Goreng',
         'image': 'assets/images/logo1.png',
