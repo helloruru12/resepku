@@ -1,8 +1,6 @@
-// lib/screens/splash_screen.dart
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../main.dart'; // Untuk akses supabase
+import '../../main.dart';
 import '../../utils/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,17 +14,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Tunggu frame pertama selesai render sebelum navigasi
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _redirect();
     });
   }
 
   Future<void> _redirect() async {
-    // Tunggu sedikit untuk menampilkan splash screen
-    await Future.delayed(const Duration(seconds: 8));
+    await Future.delayed(const Duration(seconds: 10));
 
-    // mounted check
     if (!mounted) return;
 
     final session = supabase.auth.currentSession;
@@ -39,14 +34,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: const Color(0xFFF7F5EE),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator(),
-            SizedBox(height: 20),
-            Text('Memuat...'),
+            Image.asset('assets/images/logo1.png', width: 200, height: 200),
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFE4A700)),
+            ),
           ],
         ),
       ),
