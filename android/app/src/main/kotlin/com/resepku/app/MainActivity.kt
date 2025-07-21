@@ -1,4 +1,4 @@
-package com.example.resepku
+package com.resepku.app
 
 import io.flutter.embedding.android.FlutterActivity
 

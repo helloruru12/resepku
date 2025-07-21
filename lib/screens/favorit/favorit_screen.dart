@@ -358,7 +358,7 @@ class _FavoritScreenState extends State<FavoritScreen> {
             color: isActive ? Colors.amber : Colors.black87,
           ),
         ),
-      ),
-    );
-  }
+     ),
+);
+}
 }

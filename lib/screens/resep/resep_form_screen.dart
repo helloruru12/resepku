@@ -327,7 +327,7 @@ class _ResepFormScreenState extends State<ResepFormScreen> {
             color: isActive ? Colors.amber : Colors.black87,
           ),
         ),
-      ),
-    );
-  }
+     ),
+);
+}
 }
