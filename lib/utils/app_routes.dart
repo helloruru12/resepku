@@ -5,7 +5,7 @@ import '../../screens/auth/login_screen.dart';
 import '../../screens/auth/register_screen.dart';
 import '../../screens/beranda/beranda_screen.dart';
 import '../../screens/profile/profile_screen.dart';
-// import '../../screens/favorit/favorit_screen.dart';
+import '../../screens/favorit/favorit_screen.dart';
 import '../../screens/splash_screen.dart';
 import '../../screens/resep/resep_detail_screen.dart';
 import '../../models/resep_model.dart';
